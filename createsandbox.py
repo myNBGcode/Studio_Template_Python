@@ -21,7 +21,7 @@ headers = {
     'request_id': "REPLACE_THIS_VALUE"
     }
 
-conn.request("POST", "/public/sandbox/obp.account.sandbox/v1/sandbox", payload, headers)
+conn.request("POST", "/public/sandbox/obp.account.sandbox/v1.1/sandbox", payload, headers)
 
 res = conn.getresponse()
 data = res.read()

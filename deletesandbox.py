@@ -6,7 +6,7 @@ import http.client
 conn = http.client.HTTPSConnection("apis.nbg.gr")
 
 #Change REPLACE_SANDBOX_ID with the ID of your sandbox
-conn.request("DELETE", "/public/sandbox/obp.account.sandbox/v1/sandbox/REPLACE_SANDBOX_ID")
+conn.request("DELETE", "/public/sandbox/obp.account.sandbox/v1.1/sandbox/REPLACE_SANDBOX_ID")
 
 res = conn.getresponse()
 data = res.read()

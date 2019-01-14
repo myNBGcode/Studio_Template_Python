@@ -17,7 +17,7 @@ headers = {
     'accept': "text/json"
     }
 
-conn.request("GET", "/public/sandbox/obp.account.sandbox/v1/obp/my/accounts", headers=headers)
+conn.request("GET", "/public/sandbox/obp.account.sandbox/v1.1/obp/my/accounts", headers=headers)
 
 res = conn.getresponse()
 data = res.read()
