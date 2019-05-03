@@ -1,61 +1,16 @@
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script type=text/javascript>
-        $(function() {
-          $('a#test').bind('click', function() {
-            $.getJSON('/background_process_test',
-                function(data) {
-              //do nothing
-            });
-            return false;
-          });
-        });
-</script>
-
-
-<script type=text/javascript>
-  $(function() {
-    $('a#createsandbox').bind('click', function() {
-      $.getJSON('/createsandbox',
-          function(data) {
-        //do nothing
-      });
-      return false;
-    });
-  });
-</script>
-
-<script type=text/javascript>
-  $(function() {
-    $('a#deletesandbox').bind('click', function() {
-      $.getJSON('/deletesandbox',
-          function(data) {
-        //do nothing
-      });
-      return false;
-    });
-  });
-</script>
-
-
-<script type=text/javascript>
-  $(function() {
-    $('a#myaccounts').bind('click', function() {
-      $.getJSON('/myaccounts',
-          function(data) {
-        //do nothing
-      });
-      return false;
-    });
-  });
-</script>
-
 <h1>NBG Python Test Calls</h1>
 <h2 style="font-size: 24px;">
     Before you run the calls you need to change the parameters named REPLACE_THIS_VALUE or REPLACE_SANDBOX_ID in the .py files
 </h2>
+<p>
+    {% if data %}
+            {{ data|pprint }}
+    {% endif %}
+</p>
 <ol style="font-size: 14px;">
-    <li><a href=# id=createsandbox style="font-size: 20px;">Create Sandbox Call</a></li>
-    <li><a href=# id=myaccounts style="font-size: 20px;">My Accounts call</a></li>
-    <li><a href=# id=deletesandbox style="font-size: 20px;">Delete Sandbox call</a></li>
+    <li><a href="/createsandbox" target="_blank" id=createsandbox style="font-size: 20px;">Create Sandbox Call</a></li>
+    <li><a href="/myaccounts" target="_blank" id=myaccounts style="font-size: 20px;">My Accounts call</a></li>
+    <li><a href="/deletesandbox" target="_blank" id=deletesandbox style="font-size: 20px;">Delete Sandbox call</a></li>
 </ol>
-</body> 
+</body>
+
