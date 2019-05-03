@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():
-	return render_template('index.html')
+            return render_template('index.html')
     
 
 
@@ -18,18 +18,16 @@ def createsandbox():
                 "content-type": "application/json",
                 "accept": "application/json"}
     myResponse = requests.post(url, data = data, headers = headers)
-    data= myResponse.content
-    print (data)
-    return (data)
+    data= json.loads(myResponse.content)
+    return render_template('index.html', data=data)
 
 @app.route('/deletesandbox')
 def deletesandbox():
     url = "https://apis.nbg.gr/public/sandbox/obp.account.sandbox/v1.1/sandbox/REPLACE_THIS_VALUE"
     headers = {"x-ibm-client-id": "REPLACE_THIS_VALUE"}
     myResponse = requests.delete(url, headers = headers)
-    data= myResponse.content
-    print (data)
-    return (data)
+    data= json.loads(myResponse.content)
+    return render_template('index.html', data=data)
 
 @app.route('/myaccounts')
 def myaccounts():
@@ -45,9 +43,8 @@ def myaccounts():
                 "request_id": "REPLACE_THIS_VALUE"
                 }
     myResponse = requests.get(url, headers = headers)
-    data= myResponse.content
-    print (data)
-    return (data)
+    data= json.loads(myResponse.content)
+    return render_template('index.html', data=data)
 
 if __name__== "__main__":
-	app.run(debug=True, host="0.0.0.0", port=8000)
+            app.run(debug=True, host="0.0.0.0", port=8000)
