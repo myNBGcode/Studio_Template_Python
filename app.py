@@ -12,9 +12,9 @@ def hello():
 
 @app.route('/createsandbox')
 def createsandbox():
-    url = "https://apis.nbg.gr/public/sandbox/obp.account.sandbox/v1.1/sandbox"
+    url = "https://apis.nbg.gr/sandbox/obpaccount/headers/v1.3/sandbox"
     data = '''{"sandbox_id":"REPLACE_THIS_VALUE"}'''
-    headers = {"x-ibm-client-id": "REPLACE_THIS_VALUE",
+    headers = {"Client-Id": "REPLACE_THIS_VALUE",
                 "content-type": "application/json",
                 "accept": "application/json"}
     myResponse = requests.post(url, data = data, headers = headers)
@@ -23,18 +23,18 @@ def createsandbox():
 
 @app.route('/deletesandbox')
 def deletesandbox():
-    url = "https://apis.nbg.gr/public/sandbox/obp.account.sandbox/v1.1/sandbox/REPLACE_THIS_VALUE"
-    headers = {"x-ibm-client-id": "REPLACE_THIS_VALUE"}
+    url = "https://apis.nbg.gr/sandbox/obpaccount/headers/v1.3/sandbox/REPLACE_THIS_VALUE"
+    headers = {"Client-Id": "REPLACE_THIS_VALUE"}
     myResponse = requests.delete(url, headers = headers)
     data= json.loads(myResponse.content)
     return render_template('index.html', data=data)
 
 @app.route('/myaccounts')
 def myaccounts():
-    url = "https://apis.nbg.gr/public/sandbox/obp.account.sandbox/v1.1/obp/my/accounts"
+    url = "https://apis.nbg.gr/sandbox/obpaccount/headers/v1.3/obp/my/accounts"
     headers = { "content-type": "application/json",
                 "accept": "application/json",
-                "x-ibm-client-id": "REPLACE_THIS_VALUE",
+                "Client-Id": "REPLACE_THIS_VALUE",
                 "sandbox_id": "REPLACE_THIS_VALUE",
                 "application_id": "REPLACE_THIS_VALUE",
                 "provider_username": "REPLACE_THIS_VALUE",
