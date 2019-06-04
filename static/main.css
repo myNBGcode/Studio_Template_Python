@@ -1,0 +1,727 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:600');
+
+body {
+	font-family: 'Poppins', sans-serif;
+	font-size: 1em;
+	margin-top:20px;
+	margin-bottom:0px!important;
+	margin-left:0px!important;
+	margin-right:0px!important;
+}
+p{font-size:18px;}
+
+/*********************************** POP UP START (FOR STATUS CODE) *************************************/
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: opacity 500ms;
+  visibility: hidden!important;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin-right: 5px!important;
+	margin-top:200px;
+	right:5px!important;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+	border:solid;
+  width: 140px;
+  position: absolute;
+  transition: all 5s ease-in-out;
+	visibility:visible!important;
+}
+
+.popup h2 {
+  margin-top: 0;
+	margin-bottom:0px!important;
+  color: #333;
+	font-size:14px;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20%;
+  right: 10px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #006e80;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+@media screen and (max-width: 700px){
+  .box{
+    width: 20%;
+  }
+  .popup{
+    width: 140px;
+		margin-top:200px;
+  }
+}
+
+.overlay2 {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: opacity 500ms;
+  visibility: hidden!important;
+  opacity: 0;
+}
+.overlay2:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup2 {
+  margin-right: 5px!important;
+	margin-top:300px;
+	right:5px!important;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+	border:solid;
+  width: 140px;
+  position: absolute;
+  transition: all 5s ease-in-out;
+	visibility:visible!important;
+}
+
+.popup2 h2 {
+  margin-top: 0;
+	margin-bottom:0px!important;
+  color: #333;
+	font-size:14px;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup2 .close2 {
+  position: absolute;
+  top: 20%;
+  right: 10px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup2 .close2:hover {
+  color: #006e80;
+}
+.popup2 .content2 {
+  max-height: 30%;
+  overflow: auto;
+}
+
+@media screen and (max-width: 700px){
+  .box{
+    width: 20%;
+  }
+  .popup2{
+    width: 140px;
+		margin-top:200px;
+  }
+}
+
+/**************************************** FORM START (APP CREDENTIALS) ****************************************/
+
+/* Input Fields Form */
+.form-style-10{
+	width:450px;
+	padding:30px;
+	padding-bottom: 2px!important;
+	margin:40px auto;
+	background: #FFF;
+	border-radius: 10px;
+	-webkit-border-radius:10px;
+	-moz-border-radius: 10px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13);
+	-moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13);
+	-webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13);
+}
+.form-style-10 .inner-wrap{
+	padding: 10px;
+	padding-bottom: 2px!important;
+	background: #F8F8F8;
+	border-radius: 6px;
+	margin-bottom: 15px;
+}
+.form-style-10 h1{
+	background: #006e80;
+	padding: 20px 30px 15px 30px;
+	margin: -30px -30px 30px -30px;
+	border-radius: 10px 10px 0 0;
+	-webkit-border-radius: 10px 10px 0 0;
+	-moz-border-radius: 10px 10px 0 0;
+	color: #fff;
+	text-shadow: 1px 1px 3px black;
+	font: normal 30px 'Poppins', sans-serif;
+	-moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+	-webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+	box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+	border: 1px solid #257C9E;
+}
+.form-style-10 h1 > span{
+	display: block;
+	margin-top: 2px;
+	font: 13px 'Poppins', sans-serif;
+}
+.form-style-10 label{
+	display: block;
+	font: 13px 'Poppins', sans-serif;
+	color: #888;
+	margin-bottom: 15px;
+}
+.form-style-10 input[type="text"],
+.form-style-10 input[type="date"],
+.form-style-10 input[type="datetime"],
+.form-style-10 input[type="email"],
+.form-style-10 input[type="number"],
+.form-style-10 input[type="search"],
+.form-style-10 input[type="time"],
+.form-style-10 input[type="url"],
+.form-style-10 input[type="password"],
+.form-style-10 textarea,
+.form-style-10 select {
+	display: block;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	width: 100%;
+	padding: 8px;
+	border-radius: 6px;
+	-webkit-border-radius:6px;
+	-moz-border-radius:6px;
+	border: 2px solid #fff;
+	box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.33);
+	-moz-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.33);
+	-webkit-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.33);
+}
+
+.form-style-10 .section{
+	font: normal 20px 'Poppins', sans-serif;
+	color: #006e80;
+	margin-bottom: 5px;
+}
+.form-style-10 .section span {
+	background: #006e80;
+	padding: 5px 10px 5px 10px;
+	position: absolute;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border: 4px solid #fff;
+	font-size: 14px;
+	margin-left: -45px;
+	color: #fff;
+	margin-top: -3px;
+}
+.form-style-10 input[type="button"],
+.form-style-10 input[type="submit"]{
+	background: #006e80;
+	padding: 8px 20px 8px 20px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	color: #fff;
+	text-shadow: 1px 1px 3px black;
+	font: normal 30px 'Poppins', sans-serif;
+	-moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+	-webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+	box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+	border: 1px solid #257C9E;
+	font-size: 15px;
+}
+.form-style-10 input[type="button"]:hover,
+.form-style-10 input[type="submit"]:hover{
+	background: #1F3E3C;
+	cursor: pointer;
+	-moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
+	-webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
+	box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
+}
+.form-style-10 .privacy-policy{
+	float: right;
+	width: 250px;
+	font: 12px 'Poppins', sans-serif;
+	color: #4D4D4D;
+	margin-top: 10px;
+	text-align: right;
+}
+.button {
+  background-color: #006e80; /* NBG color */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius:3%;
+}
+.button:hover {
+  background-color: #1F3E3C;
+
+}
+
+/************************************ FOOTER START (HELP AREA) ******************************************/
+
+.footer {
+    padding: 50px 0 20px 0;
+    background-color: #015563;
+    color: #d9d9d9;
+
+}
+.footer .title{text-align: left;color:#fff;font-size:25px;text-shadow: 2px 2px black!important;}
+
+
+.footer .social-icon{padding:0px;margin:0px;}
+.footer .social-icon a{display:inline-block;color:#fff;font-size:25px;padding:5px;}
+.footer .acount-icon a{display:block;color:#fff;font-size:18px;padding:5px;text-decoration:none;}
+.footer .acount-icon .fa{margin-right:25px;}
+
+
+.footer .category a {
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 1px;
+    border-radius:4px;
+    margin-top: 6px;
+    background-color: black;
+    border: solid 1px #fff;
+    font-size:14px;
+}
+
+.footer .payment{margin:0px;padding:0px;list-style-type:none}
+.footer .payment li{list-style-type:none}
+.footer .payment li a {
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+    float: left;
+    font-size: 25px;
+    padding: 10px 10px;
+}
+.row {
+  display: flex; /* equal height of the children */
+	width:100%;
+}
+.col {
+  width:30%;
+  padding: 1em;
+}
+.colform{
+	flex:1;
+}
+/***************************************** RESPONSIVE VIEW  ****************************/
+@media screen and (max-width: 1100px) and (min-width: 800px){
+
+
+	.form-style-10{
+		width:300px;
+	}
+}
+
+@media screen and (max-width: 800px) {
+
+	.row{
+		display:inline-block;
+	}
+	.col{
+		width:95%!important;
+	}
+	.form-style-10{
+		width:350px;
+	}
+}
+
+/****************************** FORM CONDITIONAL FIELD - oAuth API TOKEN *****************************/
+.control:checked ~ .conditional,
+			#immigrant:checked ~ .conditional,
+			#required-2:checked ~ .conditional
+			#option-2:checked ~ .conditional {
+				clip: auto;
+				height: auto;
+				margin: 0;
+				overflow: visible;
+				position: static;
+				width: auto;
+			}
+
+			.control:not(:checked) ~ .conditional,
+			#immigrant:not(:checked) ~ .conditional,
+			#required-2:not(:checked) ~ .conditional,
+			#option-2:not(:checked) ~ .conditional {
+				border: 0;
+				clip: rect(0 0 0 0);
+				height: 1px;
+				margin: -1px;
+				overflow: hidden;
+				padding: 0;
+				position: absolute;
+				width: 1px;
+			}
+.fieldset {border-width:0px!important;}
+
+/************************************  TEXTAREA FOR RESPONSE SAMPLES **************************************/
+.textareacss {
+	margin:auto;
+	height:500px;
+	width:99.5%; /*  */
+}
+
+/******************************* FORM HANDLER RADIOBUTTONS BOX (CARD) FOR index.php *****************************/
+/*
+.card ul {
+	list-style-type: none;
+	padding-left: 50px;
+	margin: 0;
+}
+
+.card li {
+	display: block;
+	position: relative;
+	padding: 20px 0px;
+}
+
+.card h2 {
+	margin: 10px 0;
+	font-weight: 900;
+	font-size:24px;
+	text-align:center;
+}
+
+*/
+/* Card (RADIO )
+––––––––––––––––––––––––––––––––––––––––––––––––––
+.card {
+	margin:auto;
+	display: flex;
+	flex-direction: column;
+	background: white;
+	width: 300px;
+	padding: 20px 25px;
+	border-radius: 20px;
+	box-shadow: 0 19px 38px rgba(0, 0, 0, 0.26);
+}
+*/
+
+/* Radio Button
+––––––––––––––––––––––––––––––––––––––––––––––––––
+input[type=radio] {
+	position: absolute;
+	visibility: hidden;
+}
+
+label {
+	cursor: pointer;
+	font-weight: 600;
+	font-size:18px;
+}
+
+.check {
+	width: 30px; height: 30px;
+	position: absolute;
+	border-radius: 50%;
+	transition: transform .6s ;
+}
+*/
+/* Reset
+input#chooseone ~ .check {
+	transform: translate(-50px, -25px);
+	background: #B2D7F5;
+}
+input#choosetwo ~ .check {
+	transform: translate(-50px, -83px);
+	background: #2196F3;
+	box-shadow: 0 6px 12px rgba(33, 150, 243, 0.35);
+}
+*/
+/* Radio Input #1
+input#chooseone:checked ~ .check { transform: translate(-50px, 33px); }
+*/
+/* Radio Input #2
+input#choosetwo:checked ~ .check { transform: translate(-50px, -25px); }
+*/
+/* Form radio buttons
+.formcheckerbuttons {
+	margin:auto;
+}
+ */
+
+/************************* FORM HANDLER RADIOBUTTONS BOX (VERSION 2) FOR index.php ***************************/
+
+
+.checkHandler {
+  bottom: 0;
+  display: flex;
+  left: calc(50% + 40px);
+  margin-bottom: 10px;
+  position: absolute;
+}
+.containerOuter {
+  background: white;
+  width: 300px;
+  border-radius: 8px;
+  box-shadow: 2px 6px 20px 2px rgba(10,10,120,0.30);
+	margin:auto;
+	margin-top:30px;
+	margin-bottom:-15px;
+	height:180px;
+}
+.containerContent {
+	text-align:center;
+	margin-top:20px;
+	padding: 25px 20px 20px 20px;
+	font-weight:600;
+	font-size:22px;
+}
+.containerHandler {
+  position: relative;
+  margin: 20px;
+  overflow: hidden;
+  width: 160px;
+  margin:auto;
+}
+.hidden {
+  display: none;
+}
+.entry {
+  height: 25px;
+  position: absolute;
+  width: 160px;
+}
+.entry:nth-child(2) {
+  left: 8px;
+  top: 8px;
+}
+.entry:nth-child(4) {
+  left: 8px;
+  top: 58px;
+}
+.entry:nth-child(6) {
+  left: 8px;
+  top: 108px;
+}
+.circle {
+  border: 2px solid #545556;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 20px;
+  position: absolute;
+  transition: border-color 300ms;
+  width: 20px;
+}
+.entry-label {
+  cursor: pointer;
+  padding-left: 40px;
+  user-select: none;
+  -moz-user-select: none;
+	font-family: "Open Sans", sans-serif;
+}
+.overlayHandler {
+  background: #fff;
+  mask: url(#holes);
+
+  height: 90px;
+  pointer-events: none;
+  transition: background 300ms;
+  width: 40px;
+}
+.highlight {
+  background: #4D98EF;
+  border-radius: 50%;
+  height: 12px;
+  left: 14px;
+  pointer-events: none;
+  position: absolute;
+  top: 14px;
+  transition: transform 400ms cubic-bezier(0.175, 0.885, 0.32, 1.2);
+  transform: translateY(-50px);
+  width: 12px;
+}
+.hidden:nth-child(1):checked ~ .highlight {
+  transform: translateY(0);
+}
+.hidden:nth-child(3):checked ~ .highlight {
+  transform: translateY(50px);
+}
+.hidden:nth-child(5):checked ~ .highlight {
+  transform: translateY(100px);
+}
+.hidden:nth-child(1):checked + .entry .circle {
+  border-color: #4D98EF;
+}
+.hidden:nth-child(3):checked + .entry .circle {
+  border-color: #4D98EF;
+}
+.hidden:nth-child(5):checked + .entry .circle {
+  border-color: #4D98EF;
+}
+.checkHandler:checked ~ .containerOuter .overlayHandler {
+  background: #ecf0f4;
+}
+
+/*********************************************** HEADER NAVIGATION *********************************************/
+/* Style the header with a grey background and some padding */
+.header {
+  margin-top:-20px;
+  overflow: hidden;
+  background-color: #006e80;
+  padding: 20px 10px;
+  
+}
+
+.header .logo{
+        width: 150px;
+  
+    float: left;
+  color: white;
+  text-align: center;
+
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 25px;
+  border-radius: 4px;
+  margin-top:10px;
+    margin-left:5px;
+}
+/* Style the header links */
+.header a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 25px;
+  border-radius: 4px;
+  margin:5px 1px;
+}
+
+/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+.header a.logo {
+  font-size: 18px;
+  font-weight: bold;
+    color: #006e80;
+}
+
+/* Change the background color on mouse-over */
+.header a:hover {
+  background-color: white;
+  color: black;
+}
+
+/* Style the active/current link*/
+.header a.active {
+  background-color: white;
+  color: black;
+}
+
+/* Float the link section to the right */
+.header-right {
+  float: right;
+}
+
+/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */ 
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .header-right {
+    float: none;
+  }
+}
+/************************************** DROPDOWN IN HEADER (CALLS) *******************************************/
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+.header a:hover, .dropdown:hover .dropbtn {
+  background-color: white;
+}
+/* Dropdown button */
+
+/* Add a red background color to navbar links on hover */
+.dropdown:hover .dropbtn {
+  background-color: #006e80;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+    margin-top:52px;
+    border-radius:3%;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+    margin: 5px; 
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+   background-color: #006e80;
+  color: white;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+/***************************************** BACK TO TOP BUTTON *********************************************/
+
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: black; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 10px; /* Some padding */
+  border-radius: 10%; /* Rounded corners */
+  font-size: 15px; /* Increase font size */
+}
+
+#myBtn:hover {
+  background-color: #1F3E3C; /* Add a dark-grey background on hover */
+}
