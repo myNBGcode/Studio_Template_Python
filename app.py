@@ -9,7 +9,6 @@ import json
 import sys
 import cgi
 import cgitb
-import config
 from flask.json import jsonify
 cgitb.enable()
 from urllib.parse import (parse_qs, parse_qsl, urlencode, urlparse, urlunparse)
