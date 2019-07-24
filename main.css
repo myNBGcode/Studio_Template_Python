@@ -1,0 +1,702 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:600');
+
+body {
+    color:#333333;
+	font-family: 'Poppins', sans-serif;
+	font-size: 1em;
+	margin-top:20px;
+	margin-bottom:0px!important;
+	margin-left:0px!important;
+	margin-right:0px!important;
+}
+p{font-size:18px;}
+
+h1{font-size:32px;color:#333333;}
+
+.weight {
+	font-weight:800;
+}
+.center{
+	text-align:center;
+}
+hr.divider{
+	width:40%;
+	border:2px solid #015563;
+}
+
+
+/*********************************** POP UP START (FOR STATUS CODE) *************************************/
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: opacity 500ms;
+  visibility: hidden!important;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin-right: 5px!important;
+	margin-top:200px;
+	right:5px!important;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+	border:solid;
+  width: 140px;
+  position: absolute;
+  transition: all 5s ease-in-out;
+	visibility:visible!important;
+}
+
+.popup h2 {
+  margin-top: 0;
+	margin-bottom:0px!important;
+  color: #333;
+	font-size:14px;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20%;
+  right: 10px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #006e80;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+@media screen and (max-width: 700px){
+  .box{
+    width: 20%;
+  }
+  .popup{
+    width: 140px;
+		margin-top:200px;
+  }
+}
+
+.overlay2 {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: opacity 500ms;
+  visibility: hidden!important;
+  opacity: 0;
+}
+.overlay2:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup2 {
+  margin-right: 5px!important;
+	margin-top:300px;
+	right:5px!important;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+	border:solid;
+  width: 140px;
+  position: absolute;
+  transition: all 5s ease-in-out;
+	visibility:visible!important;
+}
+
+.popup2 h2 {
+  margin-top: 0;
+	margin-bottom:0px!important;
+  color: #333;
+	font-size:14px;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup2 .close2 {
+  position: absolute;
+  top: 20%;
+  right: 10px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup2 .close2:hover {
+  color: #006e80;
+}
+.popup2 .content2 {
+  max-height: 30%;
+  overflow: auto;
+}
+
+@media screen and (max-width: 700px){
+  .box{
+    width: 20%;
+  }
+  .popup2{
+    width: 140px;
+		margin-top:200px;
+  }
+}
+
+
+/****************************** REQUEST SAMPLE CALL BUTTONS ***************************************/
+
+.button {
+  background-color: #008599; /* NBG color #006e80 #006f80 #1F3E3C*/
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius:24px;
+}
+.button:hover {
+  background-color: #006e80;
+
+}
+
+/************************************ FOOTER START (HELP AREA) ******************************************/
+
+.footer {
+    padding: 50px 0 20px 0;
+    background-color: #015563;
+    color: #d9d9d9;
+
+}
+.footer .title{text-align: left;color:#fff;font-size:25px;text-shadow: 2px 2px black!important;}
+
+
+.footer .social-icon{padding:0px;margin:0px;}
+.footer .social-icon a{display:inline-block;color:#fff;font-size:25px;padding:5px;}
+.footer .acount-icon a{display:block;color:#fff;font-size:18px;padding:5px;text-decoration:none;}
+.footer .acount-icon .fa{margin-right:25px;}
+
+
+.footer .category a {
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 1px;
+    border-radius:4px;
+    margin-top: 6px;
+    background-color: black;
+    border: solid 1px #fff;
+    font-size:14px;
+}
+
+.footer .payment{margin:0px;padding:0px;list-style-type:none}
+.footer .payment li{list-style-type:none}
+.footer .payment li a {
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+    float: left;
+    font-size: 25px;
+    padding: 10px 10px;
+}
+.row {
+  display: flex; /* equal height of the children */
+	width:100%;
+}
+.col {
+  width:30%;
+  padding: 1em;
+}
+.colform{
+	flex:1;
+}
+/***************************************** RESPONSIVE VIEW  ****************************/
+@media screen and (max-width: 1100px) and (min-width: 800px){
+
+
+	.form-style-10{
+		width:300px;
+	}
+}
+
+@media screen and (max-width: 800px) {
+
+	.row{
+		display:inline-block;
+	}
+	.col{
+		width:95%!important;
+	}
+	.form-style-10{
+		width:350px;
+	}
+}
+
+/****************************** FORM CONDITIONAL FIELD - oAuth API TOKEN *****************************/
+.control:checked ~ .conditional,
+			#immigrant:checked ~ .conditional,
+			#required-2:checked ~ .conditional
+			#option-2:checked ~ .conditional {
+				clip: auto;
+				height: auto;
+				margin: 0;
+				overflow: visible;
+				position: static;
+				width: auto;
+			}
+
+			.control:not(:checked) ~ .conditional,
+			#immigrant:not(:checked) ~ .conditional,
+			#required-2:not(:checked) ~ .conditional,
+			#option-2:not(:checked) ~ .conditional {
+				border: 0;
+				clip: rect(0 0 0 0);
+				height: 1px;
+				margin: -1px;
+				overflow: hidden;
+				padding: 0;
+				position: absolute;
+				width: 1px;
+			}
+.fieldset {border-width:0px!important;}
+
+/************************************  TEXTAREA FOR RESPONSE SAMPLES **************************************/
+.textareacss {
+	margin:auto;
+	height:500px;
+	max-width:99.5%;
+    min-width:99.5%;/*  */
+}
+
+
+/************************* FORM HANDLER RADIOBUTTONS BOX (VERSION 2) FOR index.php ***************************/
+
+
+.checkHandler {
+  bottom: 0;
+  display: flex;
+  left: calc(50% + 40px);
+  margin-bottom: 10px;
+  position: absolute;
+}
+.containerOuter {
+  background: white;
+  width: 300px;
+  border-radius: 8px;
+  box-shadow: 2px 6px 20px 2px rgba(10,10,120,0.30);
+	margin:auto;
+	margin-top:30px;
+	margin-bottom:-15px;
+	height:180px;
+}
+.containerContent {
+	text-align:center;
+	margin-top:20px;
+	padding: 25px 20px 20px 20px;
+	font-weight:600;
+	font-size:22px;
+}
+.containerHandler {
+  position: relative;
+  margin: 20px;
+  overflow: hidden;
+  width: 160px;
+  margin:auto;
+}
+.hidden {
+  display: none;
+}
+.entry {
+  height: 25px;
+  position: absolute;
+  width: 160px;
+}
+.entry:nth-child(2) {
+  left: 8px;
+  top: 8px;
+}
+.entry:nth-child(4) {
+  left: 8px;
+  top: 58px;
+}
+.entry:nth-child(6) {
+  left: 8px;
+  top: 108px;
+}
+.circle {
+  border: 2px solid #545556;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 20px;
+  position: absolute;
+  transition: border-color 300ms;
+  width: 20px;
+}
+.entry-label {
+  cursor: pointer;
+  padding-left: 40px;
+  user-select: none;
+  -moz-user-select: none;
+	font-family: "Open Sans", sans-serif;
+}
+.overlayHandler {
+  background: #fff;
+  mask: url(#holes);
+
+  height: 90px;
+  pointer-events: none;
+  transition: background 300ms;
+  width: 40px;
+}
+.highlight {
+  background: #4D98EF;
+  border-radius: 50%;
+  height: 12px;
+  left: 14px;
+  pointer-events: none;
+  position: absolute;
+  top: 14px;
+  transition: transform 400ms cubic-bezier(0.175, 0.885, 0.32, 1.2);
+  transform: translateY(-50px);
+  width: 12px;
+}
+.hidden:nth-child(1):checked ~ .highlight {
+  transform: translateY(0);
+}
+.hidden:nth-child(3):checked ~ .highlight {
+  transform: translateY(50px);
+}
+.hidden:nth-child(5):checked ~ .highlight {
+  transform: translateY(100px);
+}
+.hidden:nth-child(1):checked + .entry .circle {
+  border-color: #4D98EF;
+}
+.hidden:nth-child(3):checked + .entry .circle {
+  border-color: #4D98EF;
+}
+.hidden:nth-child(5):checked + .entry .circle {
+  border-color: #4D98EF;
+}
+.checkHandler:checked ~ .containerOuter .overlayHandler {
+  background: #ecf0f4;
+}
+
+/*********************************************** HEADER NAVIGATION *********************************************/
+/* Style the header with a grey background and some padding */
+.header {
+  margin-top:-20px;
+  overflow: hidden;
+  background-color: #006e80;
+  padding: 20px 10px;
+
+}
+
+.header .logo{
+        width: 150px;
+
+    float: left;
+  color: white;
+  text-align: center;
+
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+  margin-top:10px;
+    margin-left:5px;
+}
+/* Style the header links */
+.header .mitem {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+  margin:5px 1px;
+}
+
+/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+.header .mitem .logo {
+  font-size: 18px;
+  font-weight: bold;
+    color: #006e80;
+}
+
+/* Change the background color on mouse-over */
+.header .mitem:hover  {
+  background-color: white;
+  color: #006e80;
+}
+
+/* Style the active/current link*/
+.header .mitem.active  {
+  background-color: white;
+  color: #006e80;
+}
+
+/* Float the link section to the right */
+.header-right {
+  float: right;
+}
+
+/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+@media screen and (max-width: 500px) {
+  .header .mitem {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .header-right {
+    float: none;
+		display: inline-flex;
+  }
+	.dropdown-content {margin-top:-3px!important;}
+}
+/************************************** DROPDOWN IN HEADER (CALLS) ****************************************/
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+.header .mitem:hover, .dropdown:hover .dropbtn {
+  background-color: white;
+}
+/* Dropdown button */
+.dropdown:hover .dropdownbtn {
+  background-color: white!important;
+	color:#006e80;
+}
+
+/* Add a red background color to navbar links on hover */
+.dropdown:hover .dropbtn {
+  background-color: #006e80;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+    margin-top:52px;
+    border-radius:3%;
+}
+
+/* Links inside the dropdown */
+.dropdown-content .mitem {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+    margin: 5px;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content .mitem:hover {
+   background-color: #006e80;
+  color: white;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+/***************************************** BACK TO TOP BUTTON *********************************************/
+
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: black; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 10px; /* Some padding */
+  border-radius: 10%; /* Rounded corners */
+  font-size: 15px; /* Increase font size */
+}
+
+#myBtn:hover {
+  background-color: #1F3E3C; /* Add a dark-grey background on hover */
+}
+
+/*************************** APP CREDENTIALS FORM (HEADERS APIs and Oauth2 APIs) **********************/
+
+#form a{color:white;text-decoration: underline;}
+#form a:hover{color:white;}
+.pull-right{float: right;}
+.pull-left{float: left;}
+.clear-fix{clear:both;}
+
+
+div#form{
+	width:360px;
+	height:320px;
+	height:auto;
+	background-color: #fff;
+	margin:auto;
+	border-radius: 5px;
+	padding:20px;
+	left:50%;
+	top:50%;
+	box-shadow:1px 1px 10px 1px grey;
+}
+div.form-item{position: relative; display: block; margin-bottom: 20px;min-width: 322px;}
+ input{transition: all .2s ease;}
+ input.form-style{
+	color:#333333;
+	display: block;
+   flex:1;
+	width: 90%;
+	height: 44px;
+	padding: 5px 5%;
+	border:1px solid #ccc;
+	-moz-border-radius: 27px;
+	-webkit-border-radius: 27px;
+	border-radius: 27px;
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+	background-color: #fff;
+	font-family:'HelveticaNeue','Arial', sans-serif;
+	font-size: 105%;
+	letter-spacing: .8px;
+}
+div.form-item .form-style:focus{outline: none; border:1px solid #006f80; color:#006f80; }
+div.form-item p.formLabel {
+	position: absolute;
+	left:26px;
+	top:2px;
+	transition:all .4s ease;
+	color:#bbb;
+	border-radius:5px;}
+.formTop{top:-22px !important; left:26px; background-color: #fff; padding:0 5px; font-size: 14px; color:#006f80 !important;}
+.formStatus{color:#8a8a8a !important;}
+input[type="submit"].login{
+	float:right;
+	width: 112px;
+	height: 37px;
+	-moz-border-radius: 19px;
+	-webkit-border-radius: 19px;
+	border-radius: 19px;
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+	background-color: #006f80;
+	border:1px solid #006f80;
+	border:none;
+	color: #fff;
+	font-weight: bold;
+}
+#form input[type="submit"].login:hover{background-color: #fff; border:1px solid #006f80; color:#006f80; cursor:pointer;}
+#form input[type="submit"].login:focus{outline: none;}
+
+#form h1 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 2em;
+  line-height: 1.09375em;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #383435;
+}
+.form a:link{color:white;}
+.form a:visited{color:white;}
+.form a:hover{color:white;}
+.form a:active{color:white;}
+.form {color:white;}
+
+/********************************** Tooltip (?) for more info *****************************************/
+section#tooltip p {
+  margin: 20px 0;
+}
+
+section#tooltip > div > div > p:nth-child(odd)::first-letter {
+  font-weight: normal;
+  float: left;
+  font-size: 4em;
+  line-height: .75;
+  letter-spacing: .15em;
+  margin-top: .2em;
+}
+
+.wrapper {
+  max-width: 800px;
+}
+
+/*Tooltip text*/
+.tooltip {
+  position: relative;
+  color: white;
+  padding: 5px 12px;
+  margin: 5px;
+  font-size: 15px;
+  border-radius: 100%;
+  background-color: #006f80;
+}
+
+.tooltip .tooltip-text {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1em;
+  line-height: 1.5em;
+  visibility: hidden;
+  max-width: 800px;
+  min-width:200px;
+  background-color: #006f80;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 10px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: -290%;
+
+  opacity: 0;
+  transition: .3s;
+  transform: translate3d(0px, 20px, 0px);
+}
+
+.tooltip .tooltip-text::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #006f80 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+  transform: translate3d(0px, 0px, 0px);
+}

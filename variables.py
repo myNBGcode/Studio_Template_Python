@@ -23,17 +23,3 @@ sandbox_id="replace"
 
 formData = cgi.FieldStorage()    
 
-
-# api = formData.getvalue('api')
-# version=formData.getvalue('apiversion')
-# sandbox_id= formData.getvalue('sandboxid')
-# username=formData.getvalue('username')
-# client_id=formData.getvalue('clientid')
-
-# #if(method=='POST')
-# f = open('UserDetails.py','a')
-# api = formData.getvalue('api')
-# f.write ("{} ".format(api))
-# version=formData.getvalue('apiversion')
-# f.write ("{}\n".format(version))
-# f.close ()

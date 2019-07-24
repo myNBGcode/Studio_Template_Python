@@ -1,1 +1,1 @@
-web: pipenv install flask requests ; python app.py 
+web: pipenv install flask requests; python app.py 

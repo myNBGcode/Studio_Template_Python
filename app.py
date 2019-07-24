@@ -1,15 +1,18 @@
 from flask import Flask, request, session, g, redirect, url_for, abort, \
      render_template, flash
-import requests
-import json
 import os
+import http.client
+import logging
+import requests
+from flask import Flask, request, redirect, session ,make_response     
+import json
 import sys
 import cgi
 import cgitb
+import config
+from flask.json import jsonify
 cgitb.enable()
-
-
-
+from urllib.parse import (parse_qs, parse_qsl, urlencode, urlparse, urlunparse)
 
 
 app = Flask(__name__)
@@ -34,16 +37,22 @@ app = Flask(__name__)
 
 import cgi
 
-
 # sandbox_id = "to be filled"
 # api  = "to be filled"
 # version = "to be filled"
 # username = "to be filled"
 # client_id = "to be filled"
 
-@app.route("/",methods = ['POST', 'GET'])
-def hello():
-            return render_template('index.html')
+@app.route("/", methods = ['POST', 'GET'])
+def index():
+    resp = make_response(render_template('index.html'))
+    global mycode
+    mycode = request.args.get('code')
+    if mycode:
+        resp.set_cookie('authcode', mycode)
+        resp = make_response(render_template('index.html'))
+        print(mycode)
+    return resp   
     
 @app.route("/variables.py",methods = ['POST', 'GET'])
 def variables():
@@ -59,7 +68,7 @@ def variables():
             global client_id
             client_id = request.values.get('clientid')
             return render_template('index.html', api=api, sandbox_id=sandbox_id, version=version, username=username, client_id=client_id)
-
+   
     
 @app.route('/createsandbox',methods = ['POST', 'GET'])
 def createsandbox():
@@ -124,14 +133,20 @@ def createsandboxuser():
               }
     myResponse = requests.post(url, data = data, headers = headers)
     statuscode = myResponse.status_code
-    data= json.loads(myResponse.content)
+    if (statuscode==404):
+        data="Please check the documentation of the API you are using in case the request you are trying to send is not even available!" 
+    else:
+        data= json.loads(myResponse.content)
     return render_template('calls.html', data=data, api=api, sandbox_id=sandbox_id, version=version, username=username, client_id=client_id, statuscode=statuscode)
+
+
+
 
 
 
 if __name__== "__main__":
             print ("hello")
-            app.run(debug=True, host="0.0.0.0", port=8000)
+            app.run(debug=True, host="0.0.0.0", port=8000, threaded=True)
         
             
             
