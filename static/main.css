@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:600');
 
 body {
+    color:#333333;
 	font-family: 'Poppins', sans-serif;
 	font-size: 1em;
 	margin-top:20px;
@@ -9,6 +10,20 @@ body {
 	margin-right:0px!important;
 }
 p{font-size:18px;}
+
+h1{font-size:32px;color:#333333;}
+
+.weight {
+	font-weight:800;
+}
+.center{
+	text-align:center;
+}
+hr.divider{
+	width:40%;
+	border:2px solid #015563;
+}
+
 
 /*********************************** POP UP START (FOR STATUS CODE) *************************************/
 
@@ -140,133 +155,11 @@ p{font-size:18px;}
   }
 }
 
-/**************************************** FORM START (APP CREDENTIALS) ****************************************/
 
-/* Input Fields Form */
-.form-style-10{
-	width:450px;
-	padding:30px;
-	padding-bottom: 2px!important;
-	margin:40px auto;
-	background: #FFF;
-	border-radius: 10px;
-	-webkit-border-radius:10px;
-	-moz-border-radius: 10px;
-	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13);
-	-moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13);
-	-webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13);
-}
-.form-style-10 .inner-wrap{
-	padding: 10px;
-	padding-bottom: 2px!important;
-	background: #F8F8F8;
-	border-radius: 6px;
-	margin-bottom: 15px;
-}
-.form-style-10 h1{
-	background: #006e80;
-	padding: 20px 30px 15px 30px;
-	margin: -30px -30px 30px -30px;
-	border-radius: 10px 10px 0 0;
-	-webkit-border-radius: 10px 10px 0 0;
-	-moz-border-radius: 10px 10px 0 0;
-	color: #fff;
-	text-shadow: 1px 1px 3px black;
-	font: normal 30px 'Poppins', sans-serif;
-	-moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
-	-webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
-	box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
-	border: 1px solid #257C9E;
-}
-.form-style-10 h1 > span{
-	display: block;
-	margin-top: 2px;
-	font: 13px 'Poppins', sans-serif;
-}
-.form-style-10 label{
-	display: block;
-	font: 13px 'Poppins', sans-serif;
-	color: #888;
-	margin-bottom: 15px;
-}
-.form-style-10 input[type="text"],
-.form-style-10 input[type="date"],
-.form-style-10 input[type="datetime"],
-.form-style-10 input[type="email"],
-.form-style-10 input[type="number"],
-.form-style-10 input[type="search"],
-.form-style-10 input[type="time"],
-.form-style-10 input[type="url"],
-.form-style-10 input[type="password"],
-.form-style-10 textarea,
-.form-style-10 select {
-	display: block;
-	box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	width: 100%;
-	padding: 8px;
-	border-radius: 6px;
-	-webkit-border-radius:6px;
-	-moz-border-radius:6px;
-	border: 2px solid #fff;
-	box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.33);
-	-moz-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.33);
-	-webkit-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.33);
-}
+/****************************** REQUEST SAMPLE CALL BUTTONS ***************************************/
 
-.form-style-10 .section{
-	font: normal 20px 'Poppins', sans-serif;
-	color: #006e80;
-	margin-bottom: 5px;
-}
-.form-style-10 .section span {
-	background: #006e80;
-	padding: 5px 10px 5px 10px;
-	position: absolute;
-	border-radius: 50%;
-	-webkit-border-radius: 50%;
-	-moz-border-radius: 50%;
-	border: 4px solid #fff;
-	font-size: 14px;
-	margin-left: -45px;
-	color: #fff;
-	margin-top: -3px;
-}
-.form-style-10 input[type="button"],
-.form-style-10 input[type="submit"]{
-	background: #006e80;
-	padding: 8px 20px 8px 20px;
-	border-radius: 5px;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	color: #fff;
-	text-shadow: 1px 1px 3px black;
-	font: normal 30px 'Poppins', sans-serif;
-	-moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
-	-webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
-	box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
-	border: 1px solid #257C9E;
-	font-size: 15px;
-}
-.form-style-10 input[type="button"]:hover,
-.form-style-10 input[type="submit"]:hover{
-	background: #1F3E3C;
-	cursor: pointer;
-	-moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
-	-webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
-	box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
-}
-.form-style-10 .privacy-policy{
-	float: right;
-	width: 250px;
-	font: 12px 'Poppins', sans-serif;
-	color: #4D4D4D;
-	margin-top: 10px;
-	text-align: right;
-}
 .button {
-  background-color: #006e80; /* NBG color */
+  background-color: #008599; /* NBG color #006e80 #006f80 #1F3E3C*/
   border: none;
   color: white;
   padding: 15px 32px;
@@ -276,10 +169,10 @@ p{font-size:18px;}
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
-  border-radius:3%;
+  border-radius:24px;
 }
 .button:hover {
-  background-color: #1F3E3C;
+  background-color: #006e80;
 
 }
 
@@ -388,87 +281,10 @@ p{font-size:18px;}
 .textareacss {
 	margin:auto;
 	height:500px;
-	width:99.5%; /*  */
+	max-width:99.5%;
+    min-width:99.5%;/*  */
 }
 
-/******************************* FORM HANDLER RADIOBUTTONS BOX (CARD) FOR index.php *****************************/
-/*
-.card ul {
-	list-style-type: none;
-	padding-left: 50px;
-	margin: 0;
-}
-
-.card li {
-	display: block;
-	position: relative;
-	padding: 20px 0px;
-}
-
-.card h2 {
-	margin: 10px 0;
-	font-weight: 900;
-	font-size:24px;
-	text-align:center;
-}
-
-*/
-/* Card (RADIO )
-––––––––––––––––––––––––––––––––––––––––––––––––––
-.card {
-	margin:auto;
-	display: flex;
-	flex-direction: column;
-	background: white;
-	width: 300px;
-	padding: 20px 25px;
-	border-radius: 20px;
-	box-shadow: 0 19px 38px rgba(0, 0, 0, 0.26);
-}
-*/
-
-/* Radio Button
-––––––––––––––––––––––––––––––––––––––––––––––––––
-input[type=radio] {
-	position: absolute;
-	visibility: hidden;
-}
-
-label {
-	cursor: pointer;
-	font-weight: 600;
-	font-size:18px;
-}
-
-.check {
-	width: 30px; height: 30px;
-	position: absolute;
-	border-radius: 50%;
-	transition: transform .6s ;
-}
-*/
-/* Reset
-input#chooseone ~ .check {
-	transform: translate(-50px, -25px);
-	background: #B2D7F5;
-}
-input#choosetwo ~ .check {
-	transform: translate(-50px, -83px);
-	background: #2196F3;
-	box-shadow: 0 6px 12px rgba(33, 150, 243, 0.35);
-}
-*/
-/* Radio Input #1
-input#chooseone:checked ~ .check { transform: translate(-50px, 33px); }
-*/
-/* Radio Input #2
-input#choosetwo:checked ~ .check { transform: translate(-50px, -25px); }
-*/
-/* Form radio buttons
-.formcheckerbuttons {
-	margin:auto;
-}
- */
 
 /************************* FORM HANDLER RADIOBUTTONS BOX (VERSION 2) FOR index.php ***************************/
 
@@ -590,53 +406,53 @@ input#choosetwo:checked ~ .check { transform: translate(-50px, -25px); }
   overflow: hidden;
   background-color: #006e80;
   padding: 20px 10px;
-  
+
 }
 
 .header .logo{
         width: 150px;
-  
+
     float: left;
   color: white;
   text-align: center;
 
   text-decoration: none;
-  font-size: 18px; 
+  font-size: 18px;
   line-height: 25px;
   border-radius: 4px;
   margin-top:10px;
     margin-left:5px;
 }
 /* Style the header links */
-.header a {
+.header .mitem {
   float: left;
   color: white;
   text-align: center;
   padding: 10px;
   text-decoration: none;
-  font-size: 18px; 
+  font-size: 18px;
   line-height: 25px;
   border-radius: 4px;
   margin:5px 1px;
 }
 
 /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
-.header a.logo {
+.header .mitem .logo {
   font-size: 18px;
   font-weight: bold;
     color: #006e80;
 }
 
 /* Change the background color on mouse-over */
-.header a:hover {
+.header .mitem:hover  {
   background-color: white;
-  color: black;
+  color: #006e80;
 }
 
 /* Style the active/current link*/
-.header a.active {
+.header .mitem.active  {
   background-color: white;
-  color: black;
+  color: #006e80;
 }
 
 /* Float the link section to the right */
@@ -644,27 +460,33 @@ input#choosetwo:checked ~ .check { transform: translate(-50px, -25px); }
   float: right;
 }
 
-/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */ 
+/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
 @media screen and (max-width: 500px) {
-  .header a {
+  .header .mitem {
     float: none;
     display: block;
     text-align: left;
   }
   .header-right {
     float: none;
+		display: inline-flex;
   }
+	.dropdown-content {margin-top:-3px!important;}
 }
-/************************************** DROPDOWN IN HEADER (CALLS) *******************************************/
+/************************************** DROPDOWN IN HEADER (CALLS) ****************************************/
 
 .dropdown {
   float: left;
   overflow: hidden;
 }
-.header a:hover, .dropdown:hover .dropbtn {
+.header .mitem:hover, .dropdown:hover .dropbtn {
   background-color: white;
 }
 /* Dropdown button */
+.dropdown:hover .dropdownbtn {
+  background-color: white!important;
+	color:#006e80;
+}
 
 /* Add a red background color to navbar links on hover */
 .dropdown:hover .dropbtn {
@@ -684,18 +506,18 @@ input#choosetwo:checked ~ .check { transform: translate(-50px, -25px); }
 }
 
 /* Links inside the dropdown */
-.dropdown-content a {
+.dropdown-content .mitem {
   float: none;
   color: black;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
   text-align: left;
-    margin: 5px; 
+    margin: 5px;
 }
 
 /* Add a grey background color to dropdown links on hover */
-.dropdown-content a:hover {
+.dropdown-content .mitem:hover {
    background-color: #006e80;
   color: white;
 }
@@ -724,4 +546,157 @@ input#choosetwo:checked ~ .check { transform: translate(-50px, -25px); }
 
 #myBtn:hover {
   background-color: #1F3E3C; /* Add a dark-grey background on hover */
+}
+
+/*************************** APP CREDENTIALS FORM (HEADERS APIs and Oauth2 APIs) **********************/
+
+#form a{color:white;text-decoration: underline;}
+#form a:hover{color:white;}
+.pull-right{float: right;}
+.pull-left{float: left;}
+.clear-fix{clear:both;}
+
+
+div#form{
+	width:360px;
+	height:320px;
+	height:auto;
+	background-color: #fff;
+	margin:auto;
+	border-radius: 5px;
+	padding:20px;
+	left:50%;
+	top:50%;
+	box-shadow:1px 1px 10px 1px grey;
+}
+div.form-item{position: relative; display: block; margin-bottom: 20px;min-width: 322px;}
+ input{transition: all .2s ease;}
+ input.form-style{
+	color:#333333;
+	display: block;
+   flex:1;
+	width: 90%;
+	height: 44px;
+	padding: 5px 5%;
+	border:1px solid #ccc;
+	-moz-border-radius: 27px;
+	-webkit-border-radius: 27px;
+	border-radius: 27px;
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+	background-color: #fff;
+	font-family:'HelveticaNeue','Arial', sans-serif;
+	font-size: 105%;
+	letter-spacing: .8px;
+}
+div.form-item .form-style:focus{outline: none; border:1px solid #006f80; color:#006f80; }
+div.form-item p.formLabel {
+	position: absolute;
+	left:26px;
+	top:2px;
+	transition:all .4s ease;
+	color:#bbb;
+	border-radius:5px;}
+.formTop{top:-22px !important; left:26px; background-color: #fff; padding:0 5px; font-size: 14px; color:#006f80 !important;}
+.formStatus{color:#8a8a8a !important;}
+input[type="submit"].login{
+	float:right;
+	width: 112px;
+	height: 37px;
+	-moz-border-radius: 19px;
+	-webkit-border-radius: 19px;
+	border-radius: 19px;
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+	background-color: #006f80;
+	border:1px solid #006f80;
+	border:none;
+	color: #fff;
+	font-weight: bold;
+}
+#form input[type="submit"].login:hover{background-color: #fff; border:1px solid #006f80; color:#006f80; cursor:pointer;}
+#form input[type="submit"].login:focus{outline: none;}
+
+#form h1 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 2em;
+  line-height: 1.09375em;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #383435;
+}
+.form a:link{color:white;}
+.form a:visited{color:white;}
+.form a:hover{color:white;}
+.form a:active{color:white;}
+.form {color:white;}
+
+/********************************** Tooltip (?) for more info *****************************************/
+section#tooltip p {
+  margin: 20px 0;
+}
+
+section#tooltip > div > div > p:nth-child(odd)::first-letter {
+  font-weight: normal;
+  float: left;
+  font-size: 4em;
+  line-height: .75;
+  letter-spacing: .15em;
+  margin-top: .2em;
+}
+
+.wrapper {
+  max-width: 800px;
+}
+
+/*Tooltip text*/
+.tooltip {
+  position: relative;
+  color: white;
+  padding: 5px 12px;
+  margin: 5px;
+  font-size: 15px;
+  border-radius: 100%;
+  background-color: #006f80;
+}
+
+.tooltip .tooltip-text {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1em;
+  line-height: 1.5em;
+  visibility: hidden;
+  max-width: 800px;
+  min-width:200px;
+  background-color: #006f80;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 10px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: -290%;
+
+  opacity: 0;
+  transition: .3s;
+  transform: translate3d(0px, 20px, 0px);
+}
+
+.tooltip .tooltip-text::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #006f80 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+  transform: translate3d(0px, 0px, 0px);
 }

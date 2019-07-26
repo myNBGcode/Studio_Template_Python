@@ -15,35 +15,45 @@
         
 <!--************************************* HEADER NAVIGATION **********************************************-->        
         <div class="header">
-  <img href="/" src="https://developer.nbg.gr/static/media/developerstudio@4x.cc1a74b3.png" class="logo"/>
+  <a href="/"><img  src="https://developer.nbg.gr/static/media/developerstudio@4x.cc1a74b3.png" class="logo"/></a>
   <div class="header-right">
-    <a class="active" href="/">Home</a>
-      <div class="dropdown">
-    <a href="#">Calls
+    <a class="active mitem" href="/">Home</a>
+
+
+           <div class="dropdown">
+    <a href="#" class="mitem dropdownbtn">Calls
       <i class="fa fa-caret-down"></i>
     </a>
+
+
     <div class="dropdown-content">
-      <a href="/createsandbox">Create Sandbox</a>
-      <a href="/exportsandbox">Export Sandbox</a>
-      <a href="/deletesandbox">Delete Sandbox</a>
-        <a href="/createsandboxuser">Create Sandbox User</a>
+      <a href="/createsandbox" class="mitem">Create Sandbox</a>
+     <a href="/exportsandbox" class="mitem">Export Sandbox</a>
+     <a href="/deletesandbox" class="mitem">Delete Sandbox</a>
+        <a href="/createsandboxuser" class="mitem">Create Sandbox User</a>
     </div>
-  </div> 
-      
-    <a href="https://github.com/myNBGcode/PostmanCollections" target="_blank">Resources</a>
-    <a href="https://developer.nbg.gr/" target="_blank">Portal</a>
-      <a href="https://github.com/myNBGcode" target="_blank">Github</a>
+  </div>
+
+    <a href="https://github.com/myNBGcode/PostmanCollections" target="_blank" class="mitem">Resources</a>
+    <a href="https://developer.nbg.gr/" target="_blank" class="mitem">Portal</a>
+      <a href="https://github.com/myNBGcode" target="_blank" class="mitem">Github</a>
   </div>
 </div>
         
         
-        <h1 style="text-align:center;">NBG Python Test Calls - <span style="color:#006e80;">Welcome to our Test Website</span></h1>
+     <h1 style="margin-top:35px;" class="center weight">Welcome to our <span style="color:#006e80;">Python</span> Sandbox Calls Test Website</h1>
+        <h4 style="font-size: 16px;margin-top:-20px;" class="center">
+            Choose your preferred API type. Fill up the form. Have fun testing!
+        </h4>
   
         
 <!------------- FORM HANDLER v.2 FOR SHOWING AND HIDING THE PROPER FORM DEPENDING ON API TYPE ----------------->
 
 <div class="containerOuter"> <div class="containerContent">
-    Choose API type:</div>
+    <div class="weight">
+
+   Choose API type:  </div></div>
+
   <div class="containerHandler">
     <input type="radio" class="hidden" id="input1" name="inputs" onclick="showHeader(this);checkForm();" checked>
     <label class="entry" for="input1"><div class="circle"></div><div class="entry-label">Header API</div></label>
@@ -67,110 +77,118 @@
         
 <!------------------------------------ FORM FOR APIS WITH HEADERS -------------------------------------------->
         
-             <div class="row">
+             <div class=row style="margin-top:20px;">
 
-    <div class="form-style-10" id="headersapiform" class="colform" style="pointer-events:auto">
-        <h1>Insert your App Credentials! (for Header APIs)<span>Need help? Visit <a href="https://developer.nbg.gr" target="_blank" style="color:white;">developer.nbg.gr</a> for more info.</span></h1>
+    <div id="headersapiform" class=colform style="pointer-events:auto">
 
-        <form method="post" id="initial" name="myform2" action="/variables.py#testcalls">
-    <div class="section"><span>1</span>Insert your preferred Sandbox_id.</div>
-    <div class="inner-wrap">
-    <label>Sandbox_id: <input type="text" name="sandboxid" id="testover" placeholder="e.g. mySandbox" required/>	</label>
-    </div>
+         <div id="formWrapper">
 
-    <div class="section"><span>2</span>Insert the title of API you want to test.</div>
-    <div class="inner-wrap">
-        <label>API title:<input type="text" name="api" placeholder="e.g. socialnetwork" required/></label>
-    </div>
+<div id="form"> <h2 class="center weight"> Headers APIs</h2>
+     <form method="post" id="initial" name="myform2" action="/variables.py#testcalls">
 
-    <div class="section"><span>3</span>Provide the latest available API version.</div>
-        <div class="inner-wrap">
-        <label>API version:<input type="text" name="apiversion" placeholder="e.g. v2.2" required/></label>
-    </div>
+         <div  style="display:flex!important;">
+		<div class="form-item" style="flex:1!important;display:inline-block;">
+			<p class="formLabel">Client-Id</p>
+			<input type="text" name="clientid" id="clientid" class="form-style" required/>
+    </div> <div style="flex:1!important;margin-top:17px;display:inline-block;"><span class="tooltip">?<span class="tooltip-text">You must obtain a valid Client-Id and subscribe your App to the API you are going to test. Visit <a href="https://developer.nbg.gr/applications" target="_blank">Developer Portal</a> to set your App.</span> </span></div> </div>
 
-    <div class="section"><span>4</span>Provide the preferred Sandbox User username.</div>
-        <div class="inner-wrap">
-        <label>Username:<input type="text" name="username" placeholder="e.g. myTestUser" required/></label>
-    </div>
+        <div  style="display:flex!important;">
+		<div class="form-item" style="flex:1!important;display:inline-block;">
+			<p class="formLabel">API Title</p>
+			<input type="text" name="api" id="api" class="form-style" required/>
+            </div> <div style="flex:1!important;margin-top:17px;display:inline-block;"><span class="tooltip">?<span class="tooltip-text">Visit the <a href="https://developer.nbg.gr/apiProducts" target="_blank">documentation of the API </a>and get the Title from the URL of any Sample Call. </span> </span></div> </div>
 
-    <div class="section"><span>5</span>Provide the Client-Id you obtained for your App.</div>
-        <div class="inner-wrap">
-        <label>Client-Id:<input type="text" name="clientid" placeholder="e.g. FBCDFHDI-JSUFIEJNDI-SKDHIEJDFJ" required/></label>
-    </div>
+         <div  style="display:flex!important;">
+		<div class="form-item" style="flex:1!important;display:inline-block;">
+			<p class="formLabel">API version</p>
+			<input type="text" name="apiversion" id="apiversion" class="form-style" required/>
+    </div> <div style="flex:1!important;margin-top:17px;display:inline-block;"><span class="tooltip">?<span class="tooltip-text">Visit again the <a href="https://developer.nbg.gr/apiProducts" target="_blank">documentation of the API </a>and this time get the Version from the URL of the Sample Call you used above.</span> </span></div> </div>
 
-         <div class="section"><span>6</span>oAuth API Credentials. (Optional)</div>
-        <div class="inner-wrap" class="conditional">
+         <div  style="display:flex!important;">
+		<div class="form-item" style="flex:1!important;display:inline-block;">
+			<p class="formLabel">Sandbox Id</p>
+			<input type="text" name="sandboxid" id="sandboxid" class="form-style" required/>
+    </div> <div style="flex:1!important;margin-top:17px;display:inline-block;"><span class="tooltip">?<span class="tooltip-text">Choose your preferred Sandbox Id for your calls. Be creative, in order to avoid already used Sandbox-Ids. </span> </span></div> </div>
 
-						<label for="requirement" style="display:inline-block;">Are you using oAuth API?</label><input type="checkbox" id="requirement" class="control">
-						<fieldset class="conditional">
-									<label for="option">oAuth Authorization Token:<input type="text" id="option" name="token"></label>
-            </fieldset>
-    </div>
+         <div  style="display:flex!important;">
+		<div class="form-item" style="flex:1!important;display:inline-block;">
+			<p class="formLabel">Sandbox Username</p>
+			<input type="text" name="username" id="username" class="form-style" required/>
+    </div> <div style="flex:1!important;margin-top:17px;display:inline-block;"><span class="tooltip">?<span class="tooltip-text">Choose your preferred Sandbox Username for your calls. Be creative, in order to avoid already used usernames.</span> </span></div> </div>
 
-    <div class="button-section">
-     <input type="submit" name="submit" style="margin-left:37%;margin-bottom:10px;" id="submit" value="Let's Code!" />
-    </div>
-    </form>
-        </div>
+
+		<div class="form-item">
+		<input type="submit" name="submitheader" id="submitheader" class="login pull-right" value="Let's Code">
+		<div class="clear-fix"></div>
+		</div>
+         </form>
+</div>
+</div></div><br>
+
 
 <!--------------------------------------- FORM FOR APIS WITH OAUTH2 ---------------------------------------->
 
-    <div class="form-style-10" id="oauthapiform" class="colform" style="pointer-events:auto">
-    <h1>Insert your App Credentials! (for oAuth2 APIs)<span>Need help? Visit <a href="https://developer.nbg.gr" target="_blank" style="color:white;">developer.nbg.gr</a> for more info.</span></h1>
 
-    <form method="post" id="initial" name="myform2" action="/variables.py#testcalls">
-    <div class="section"><span>1</span>Insert your preferred Sandbox_id.</div>
-    <div class="inner-wrap">
-        <label>Sandbox_id: <input type="text" name="sandboxid" placeholder="e.g. mySandbox" required/></label>
-    </div>
+    <div id="oauthapiform" class=colform style="pointer-events:auto">
 
-    <div class="section"><span>2</span>Insert the title of API you want to test.</div>
-    <div class="inner-wrap">
-        <label>API title:<input type="text" name="api" placeholder="e.g. socialnetwork" required/></label>
-    </div>
+        <div id="formWrapper">
 
-    <div class="section"><span>3</span>Provide the latest available API version.</div>
-        <div class="inner-wrap">
-        <label>API version:<input type="text" name="apiversion" placeholder="e.g. v2.2" required/></label>
+<div id="form"> <h2 class="center weight"> oAuth2 APIs</h2>
+     <form method="post" id="initial" name="myform2" action="/test.py#testcalls">
 
-    </div>
-    <div class="section"><span>4</span>Provide the preferred Sandbox User username.</div>
-        <div class="inner-wrap">
-        <label>Username:<input type="text" name="username" placeholder="e.g. myTestUser" required/></label>
-    </div>
+         <div  style="display:flex!important;">
+		<div class="form-item" style="flex:1!important;display:inline-block;">
+			<p class="formLabel">Authorization Token</p>
+			<input type="text" name="token" id="token" class="form-style" required/>
+    </div> <div style="flex:1!important;margin-top:17px;display:inline-block;"><span class="tooltip">?<span class="tooltip-text">You must obtain a "Bearer" Token either from Get Token API in <a href="https://developer.nbg.gr/applications" target="_blank">Developer Portal</a> or by using your prefered application (Postman etc.).</span> </span></div> </div>
 
-    <div class="section"><span>5</span>Provide the Client-Id you obtained for your App.</div>
-        <div class="inner-wrap">
-        <label>Client-Id:<input type="text" name="clientid" placeholder="e.g. FBCDFHDI-JSUFIEJNDI-SKDHIEJDFJ" required/></label>
-    </div>
+        <div  style="display:flex!important;">
+		<div class="form-item" style="flex:1!important;display:inline-block;">
+			<p class="formLabel">API Title</p>
+			<input type="text" name="api" id="api" class="form-style" required/>
+    </div> <div style="flex:1!important;margin-top:17px;display:inline-block;"><span class="tooltip">?<span class="tooltip-text">Visit the <a href="https://developer.nbg.gr/apiProducts" target="_blank">documentation of the API </a>and get the Title from the URL of any Sample Call. </span> </span></div> </div>
 
-         <div class="section"><span>6</span>oAuth API Credentials. (Optional)</div>
-        <div class="inner-wrap" class="conditional">
+         <div  style="display:flex!important;">
+		<div class="form-item" style="flex:1!important;display:inline-block;">
+			<p class="formLabel">API version</p>
+			<input type="text" name="apiversion" id="apiversion" class="form-style" required/>
+    </div> <div style="flex:1!important;margin-top:17px;display:inline-block;"><span class="tooltip">?<span class="tooltip-text">Visit again the <a href="https://developer.nbg.gr/apiProducts" target="_blank">documentation of the API </a>and this time get the Version from the URL of the Sample Call you used above.</span> </span></div> </div>
 
-						<label for="requirement" style="display:inline-block;">Are you using oAuth API?</label><input type="checkbox" id="requirement" class="control">
-						<fieldset class="conditional">
-									<label for="option">oAuth Authorization Token:<input type="text" id="option" name="token"></label>
-            </fieldset>
-    </div>
+         <div  style="display:flex!important;">
+		<div class="form-item" style="flex:1!important;display:inline-block;">
+			<p class="formLabel">Sandbox Id</p>
+			<input type="text" name="sandboxid" id="sandboxid" class="form-style" required/>
+    </div> <div style="flex:1!important;margin-top:17px;display:inline-block;"><span class="tooltip">?<span class="tooltip-text">Choose your preferred Sandbox Id for your calls. Be creative, in order to avoid already used Sandbox-Ids. </span> </span></div> </div>
 
-    <div class="button-section">
-     <input type="submit" name="submit" style="margin-left:37%;" id="submit" value="Let's Code!" />
-    </div>
-    </form>
-           </div> </div>
+         <div  style="display:flex!important;">
+		<div class="form-item" style="flex:1!important;display:inline-block;">
+			<p class="formLabel">Sandbox Username</p>
+			<input type="text" name="username" id="username" class="form-style" required/>
+    </div> <div style="flex:1!important;margin-top:17px;display:inline-block;"><span class="tooltip">?<span class="tooltip-text">Choose your preferred Sandbox Username for your calls. Be creative, in order to avoid already used usernames.</span> </span></div> </div>
+
+
+		<div class="form-item">
+		<input type="submit" name="submitoauth" id="submitoauth" class="login pull-right" value="Let's Code">
+		<div class="clear-fix"></div>
+		</div>
+         </form>
+</div>
+</div>
+
+           </div> <br></div>
         
         
  <!----------------------------------- REQUEST SAMPLE CALL BUTTONS ------------------------------>      
         
         <div id="testcalls" >
-        <h3 style="font-size:32px;text-align:center;" >
-            Request <span style="color:#015563">Samples:</span>
+        <h3 style="font-size:32px;margin-top:45px;margin-left:35px;" class="center weight">
+            Request Samples:
         </h3> </div>
-        <div id="showbuttons" style="text-align:center;margin-bottom:55px;margin-top:25px;" >
+        <div id="showbuttons" style="margin-bottom:65px;margin-top:25px;" class="center">
         <ol style="font-size: 14px;" >
-            <li style="display:inline-block;"> <a href="/createsandbox" target="_blank" id="createsandbox"><button class="button">Create Sandbox call</button></a></li>
-            <li style="display:inline-block;"><a href="/exportsandbox" target="_blank" id="exportsandbox"><button class="button">Export Sandbox call</button></a></li>
-            <li style="display:inline-block;"><a href="/deletesandbox" target="_blank" id="deletesandbox"><button class="button">Delete Sandbox call</button></a></li>
+            <li style="display:inline-block;"> <a href="/createsandbox" target="_blank" id="createsandbox"><button class="button">Create Sandbox call</button></a></li><br><br>
+            <li style="display:inline-block;"><a href="/exportsandbox" target="_blank" id="exportsandbox"><button class="button">Export Sandbox call</button></a></li><br><br>
+            <li style="display:inline-block;"><a href="/deletesandbox" target="_blank" id="deletesandbox"><button class="button">Delete Sandbox call</button></a></li><br><br>
             <li style="display:inline-block;"><a href="/createsandboxuser" target="_blank" id="createsandboxuser"><button class="button">Create Sandbox User call</button></a></li>
 
             <!--  ADD YOUR CALLS:
@@ -311,6 +329,46 @@ function topFunction() {
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
  </script>       
+        
+        <script> $(document).ready(function(){
+	var formInputs = $('input[type="email"],input[type="password"],input[type="text"]');
+	formInputs.focus(function() {
+       $(this).parent().children('p.formLabel').addClass('formTop');
+       $('div#formWrapper').addClass('darken-bg');
+       $('div.logo').addClass('logo-active');
+	});
+	formInputs.focusout(function() {
+		if ($.trim($(this).val()).length == 0){
+		$(this).parent().children('p.formLabel').removeClass('formTop');
+		}
+		$('div#formWrapper').removeClass('darken-bg');
+		$('div.logo').removeClass('logo-active');
+	});
+	$('p.formLabel').click(function(){
+		 $(this).parent().children('.form-style').focus();
+	});
+
+        for (var i = 0; i < formInputs.length; i++) {
+            var formInput = formInputs[i];
+            var $formInput = $(formInput);
+            var inputValue = $formInput.val();
+            var hasClass = $formInput.hasClass('form-style');
+            if (hasClass && inputValue !== undefined && inputValue.length) {
+                $formInput.focus();
+            }
+        }
+    });
+
+        </script>
+
+        <script> (function() {
+    if (document.location.hash) {
+        setTimeout(function() {
+            window.scrollTo(window.scrollX, window.scrollY - 140);
+        }, 10);
+    }
+})();</script>
+        
     </body>
 
 </html>

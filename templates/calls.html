@@ -7,45 +7,48 @@
 
         <link rel="stylesheet" type="=text/css" href="{{ url_for('static', filename='main.css') }}">	
 <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='main.css') }}">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-			
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js">				</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.21.1/babel.min.js"></script>
     </head>
     <body style="margin:20px;" onload="load()">
 
-       <div class="header">
-  <img href="/" src="https://developer.nbg.gr/static/media/developerstudio@4x.cc1a74b3.png" class="logo"/>
+<!--************************************* HEADER NAVIGATION **********************************************-->        
+        <div class="header">
+  <a href="/"><img  src="https://developer.nbg.gr/static/media/developerstudio@4x.cc1a74b3.png" class="logo"/></a>
   <div class="header-right">
-    <a href="/">Home</a>
-      <div class="dropdown">
-    <a href="#">Calls
+    <a class="active mitem" href="/">Home</a>
+
+
+           <div class="dropdown">
+    <a href="#" class="mitem dropdownbtn">Calls
       <i class="fa fa-caret-down"></i>
     </a>
+
+
     <div class="dropdown-content">
-      <a href="/createsandbox">Create Sandbox</a>
-      <a href="/exportsandbox">Export Sandbox</a>
-      <a href="/deletesandbox">Delete Sandbox</a>
-        <a href="/createsandboxuser">Create Sandbox User</a>
+      <a href="/createsandbox" class="mitem">Create Sandbox</a>
+     <a href="/exportsandbox" class="mitem">Export Sandbox</a>
+     <a href="/deletesandbox" class="mitem">Delete Sandbox</a>
+        <a href="/createsandboxuser" class="mitem">Create Sandbox User</a>
     </div>
-  </div> 
-      
-   <a href="https://github.com/myNBGcode/PostmanCollections" target="_blank">Resources</a>
-    <a href="https://developer.nbg.gr/" target="_blank">Portal</a>
-      <a href="https://github.com/myNBGcode" target="_blank">Github</a>
-      <a href="#docs">Documentation</a>
+  </div>
+
+    <a href="https://github.com/myNBGcode/PostmanCollections" target="_blank" class="mitem">Resources</a>
+    <a href="https://developer.nbg.gr/" target="_blank" class="mitem">Portal</a>
+      <a href="https://github.com/myNBGcode" target="_blank" class="mitem">Github</a>
   </div>
 </div>
-        
        
-        <h1 style="text-align:center;">NBG Python Test Calls - <span style="color:#006e80;">Welcome to our Test Website</span></h1>
+         <h1 class="weight center" style="margin-top:35px;">Create Sandbox call Page - Python Test Website</h1>
        
  
 <!--************************************* REQUEST CALL BUTTONS ********************************************-->       
         
-        <div id="testcalls" >
-        <h3 style="font-size:32px;text-align:center;" >
-            Request <span style="color:#015563">Samples:</span>
+       
+        <div id="testcalls">
+            <hr class="divider">
+        <h3 style="font-size:32px;" class="center weight">
+            Request Samples:
         </h3> </div>
         <div id="showbuttons" style="text-align:center;margin-bottom:55px;margin-top:25px;" >
         <ol style="font-size: 14px;" >
@@ -61,10 +64,10 @@
         
         
         <div >
-            <h3 style="font-size: 24px;margin-bottom:10px;">
+            <h3 style="font-size: 24px;margin-bottom:10px;" class="weight">
                 Response Samples:
             </h3>
-            <textarea name="" class="textareacss" id="myTextarea" cols="80" rows="50" style="width:100%">
+            <textarea name="" class="textareacss" id="myTextarea" cols="80" rows="50">
 
                 {% if data %}
                 {{ data|pprint }}
@@ -103,7 +106,7 @@
                  <a>YourVariable: <?php// echo $YourVariable ; ?></a>
                  <a>YourVariable: <?php// echo $YourVariable ; ?></a>
                  <a>YourVariable: <?php// echo $YourVariable ; ?></a>  -->
-            <a style="color:#d9d9d9">Add your own! Please refer to index.php and footer.php to change or add values according to your needs.</a>
+            <a style="color:#d9d9d9">Add your own! Please refer to calls.html and index.html to change or add values according to your needs.</a>
           </span>
             </div>
         <div style="width:45%;display:inline-block;" class="col">
